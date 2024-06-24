@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>F1 Standigs</title>
+    <link rel="icon" href="images/F1logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <div class="contacto">
+            <figure>
+                <a href="./formulario.html"><img src="images/IconoContacto.svg" alt="contacto"></a>      
+            </figure>
+        </div>
+        <figure class="logo">
+            <img src="images/f1LogoBlanco.png" alt="logo f1" class="logo">
+        </figure>
+        <button class="desplegar-menu" id="btn-abrirMenu">
+                <img src="images/IconoMenu.svg" alt="">
+        </button>
+        </button>
+        <nav class="nav">
+            <ul class="nav-list" id="menu-responsive">                   
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./TemporadaActual.html">Mundial y Calendario</a></li>
+                <li><a href="./campeones.html">Campeones</a></li>
+                <li><button id="toggleButton" class="btn-tema"><img src="images/IconoToggles.svg" alt=""></button></li>
+            </ul>    
+        </nav>
+    </header> 
+    <main class="mundiales">
+        <h1>Mundial de Pilotos 2024</h1>
+        
+        <table id="tablaPilotos">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Equipo</th>
+                    <th>Puntos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Filas de datos dinámicos -->
+            </tbody>
+        </table>
+
+        <h2>Formulario de Pilotos</h2>
+        <form id="FormPilotos">
+            <input type="hidden" id="pilotId" name="pilotId">
+            <label for="name">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <label for="team">Equipo:</label>
+            <input type="text" id="escuderia" name="escuderia" required>
+            <label for="points">Puntos:</label>
+            <input type="number" id="puntos" name="puntos" required>
+            <button type="submit" id="btn-agregar">Agregar</button>
+            <button type="submit" id="btn-modificar">Modificar</button>
+        </form>
+    </main>
+    <aside class="constructores">
+        <h1>Mundial de Constructores 2024</h1>
+        <ol>
+            <li>Red Bull - 318pts</li>
+            <li>Ferrari - 265pts</li>
+            <li>McLaren - 190pts</li>
+            <li>Mercedes - 120pts</li>
+            <li>Aston Martin - 56pts</li>
+            <li>Alpine - 38pts</li>
+            <li>AlphaTauri - 20pts</li>
+            <li>Haas - 6pts</li>
+            <li>Williams - 2pts</li>
+            <li>Alfa Romeo - 0pts</li>
+        </ol>
+    </aside>
+    
+    </div>
+    <section class="gp-disputados">
+
+        <h1>Grandes Premios Disputados en 2024</h1>
+        <div class="gp">
+            <h2>Gran Premio de Bahréin</h2>
+            <p class="fecha">Fecha: 2 de marzo</p>
+            <p class="ganador">Ganador: Max Verstappen</p>
+        </div>
+        <div class="gp">
+            <h2>Gran Premio de Arabia Saudita</h2>
+            <p class="fecha">Fecha: 9 de marzo</p>
+            <p class="ganador">Ganador: Max Verstappen</p>
+        </div>
+        <div class="gp">
+            <h2>Gran Premio de Australia</h2>
+            <p class="fecha">Fecha: 24 de marzo</p>
+            <p class="ganador">Ganador: Carlos Sainz</p>
+        </div>
+        <div class="gp">
+            <h2>Gran Premio de Japon</h2>
+            <p class="fecha">Fecha: 7 de abril</p>
+            <p class="ganador">Ganador: Max Verstappen</p>
+        </div>
+        <div class="gp">
+            <h2>Gran Premio de China</h2>
+            <p class="fecha">Fecha: 21 de abril</p>
+            <p class="ganador">Ganador: Max Verstappen</p>
+        </div>
+        <div class="gp">
+            <h2>Gran Premio de Miami</h2>
+            <p class="fecha">Fecha: 5 de mayo</p>
+            <p class="ganador">Ganador: Lando Norris</p>
+        </div>
+        <div class="gp">
+            <h2>Gran Premio de Emilia-Romaña</h2>
+            <p class="fecha">Fecha: 19 de mayo</p>
+            <p class="ganador">Ganador: Max Verstappen</p>
+        </div>
+        <div class="gp">
+            <h2>Gran Premio de Monaco</h2>
+            <p class="fecha">Fecha: 26 de mayo</p>
+            <p class="ganador">Ganador: Charles Leclerc</p>
+        </div>
+        <div class="gp">
+            <h2>Gran Premio de Canada</h2>
+            <p class="fecha">Fecha: 9 de junio</p>
+            <p class="ganador">Ganador: Max Verstappen</p>
+        </div>
+        <div class="gp">
+            <h2>Gran Premio de España</h2>
+            <p class="fecha">Fecha: 23 de junio</p>
+            <p class="ganador">Ganador: Max Verstappen</p>
+        </div>
+        <footer>
+            <p>&copy; 2024 F1 Fan Club. Todos los derechos reservados.</p>
+        </footer>
+        <script src='./js/main.js'></script>
+        <script src="./js/tablaDinamica.js"></script>
+    </body>
+</html>

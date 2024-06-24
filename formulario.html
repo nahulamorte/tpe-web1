@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Unete a la formula 1</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="images/F1logo.png">
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <header>
+            <div class="contacto">
+                <figure>
+                    <a href="./formulario.html"><img src="images/IconoContacto.svg" alt="contacto"></a>      
+                </figure>
+            </div>
+            <figure class="logo">
+                <img src="images/f1LogoBlanco.png" alt="logo f1" class="logo">
+            </figure>
+            <button class="desplegar-menu" id="btn-abrirMenu">
+                    <img src="images/IconoMenu.svg" alt="">
+            </button>
+            </button>
+            <nav class="nav">
+                <ul class="nav-list" id="menu-responsive">                      
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="./TemporadaActual.html">Mundial y Calendario</a></li>
+                    <li><a href="./campeones.html">Campeones</a></li>
+                    <li><button id="toggleButton" class="btn-tema"><img src="images/IconoToggles.svg" alt=""></button></li>
+                </ul>    
+            </nav>
+        </header> 
+
+        <main>
+            <div class="container">
+                <h2 class="h2-form">Unete a la f1</h2>
+                <div class="login-container">
+                    <form action="/login" method="post" id="form">
+                        <div class="inciso-form">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required>
+                        </div>
+                        <div class="inciso-form">
+                            <label for="apellido">Apellido:</label>
+                            <input type="text" id="apellido" name="apellido" placeholder="Ingrese su apellido" required>
+                        </div>
+                        <div class="inciso-form">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" placeholder="Ingrese su mail" required>
+                        </div>
+                        <div class="inciso-form">
+                            <p id="captcha"></p>
+                        </div>
+                        <div class="inciso-form">
+                            <label for="captchaInput">Ingrese el captcha:</label>
+                            <input type="text" id="captchaIngresado" name="captchaInput" placeholder="Ingrese el captcha" required>
+                        </div>
+                        <p id="avisoError"></p>
+                        <p id="avisoOk"></p>                         
+                        <button type="submit" id="btn-form">Aceptar</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+        <script src="./js/main.js"></script>
+        <script src="./js/captcha.js"></script>
+    </body>
+</html>
+

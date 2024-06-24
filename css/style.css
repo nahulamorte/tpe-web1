@@ -1,0 +1,446 @@
+/*Sacar propiedades generales*/
+a {
+    text-decoration: none;
+}
+
+a, a:visited {
+    color: #060000;
+    list-style: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+/*Aplicar esto para todo el archivo HTML*/
+@font-face {
+    font-family: tipografiaF1Minuscula;
+    src: url(Fuentes/Formula1-Regular_web_0.ttf);
+}
+
+/*Aplicar estos estilos para todos los archivos.*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: tipografiaF1Minuscula;
+    scrollbar-width: 15px;
+}
+
+
+/*body general para todos los html*/
+body {
+    background-color: #F0DDDD;
+    color: #000000; 
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+body.dark-mode { /*para modo oscuro de la pagina*/ 
+    background-color: #121212;
+    color: #ffffff;
+}
+
+
+/*Estilo para header y nav*/
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    background-color: #FF0000;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    width: 15rem;
+    height: auto;
+    top: 0;
+}
+
+.nav-list {
+    display: none;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: space-between;
+}
+
+.mostrar-navlist {
+    display: block;
+}
+
+.desplegar-menu {
+    display: block;
+    margin: 0;
+    color:#F0DDDD;
+    border: none;
+    background: none;
+    font-size: 2rem ;
+    height: 3rem;
+    width: 3rem;
+}
+
+.desplegar-menu:hover {
+    cursor: pointer;
+}
+
+.contacto {
+    height: 3rem;
+    width: 3 rem;
+    padding-left: 2rem;
+    padding-top: 1rem;
+}
+
+.btn-tema {
+    background: none;
+}
+
+
+button:hover{
+    background-color: #0056b3;
+}
+
+/*Media query para pantallas grandes*/
+@media (min-width: 500px) {
+    * {
+        scrollbar-width: 0px;
+    }
+    .nav-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 2rem;
+    }
+    .cerrar-menu {
+        display: none;
+    }
+
+    .desplegar-menu {
+        display: none;
+    }
+
+}
+
+/*footer general para todas las paginas*/
+
+footer {
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+    color: #ccc;
+}
+
+/*para el index*/
+
+.noticias {
+    margin: 20px 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.noticias h1, h2, h3 {
+    color: #e82a2a;
+}
+
+.noticias h1 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.noticiasnoticias h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+}
+
+.noticiasnoticias h3 {
+    font-size: 1.2em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/*para los section de la noticia*/
+.noticias {
+    margin-bottom: 30px;
+}
+
+.noticias p{
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.noticias p strong{
+    font-weight: bold;
+    color: #333;
+}
+
+/*Para las imagenes de la noticia*/
+figure {
+    margin: 20px 0;
+    text-align: center;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+/*Media query para pantallas de escritorio*/
+@media (min-width: 500px) {
+    .noticias {
+        margin: 20px auto;
+        padding: 20px;
+        max-width: 1200px;
+    }
+
+    .noticias h1 {   
+        font-size: 2.5em;
+    }
+
+    .noticias h2 {
+        font-size: 1.8em;
+    }
+
+    .noticias h3 {
+        font-size: 1.5em;
+    }
+}
+
+/*para el archivo de campeones */
+.tabla-campeones {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabla-campeones th,
+.tabla-campeones td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.tabla-campeones th {
+    background-color: #F0DDDD;
+  font-weight: bold;
+  color: #000000;
+}
+
+.tabla-campeones tr:hover {
+  background-color: #ff3a3a;
+}
+
+@media (min-width: 500px) {
+    .tabla-campeones th,
+    .tabla-campeones td {
+        padding: 4px, 5px ;
+    }
+}
+
+/*Para el html de temporada actual 2024*/
+
+/* Ajustes para centrar la tabla */
+#tablaPilotos {
+    margin: 0 auto; /* Centra la tabla horizontalmente */
+    width: 80%; /* Ancho máximo para la tabla */
+    max-width: 800px; /* Ajusta el ancho máximo según sea necesario */
+}
+
+#tablaPilotos tr:hover {
+    background-color: #ff3a3a;
+  }
+
+/* Estilos para la lista de constructores */
+.constructores {
+    text-align: center; /* Centra el texto dentro del aside */
+}
+
+.constructores ol {
+    padding-left: 0; /* Elimina el relleno izquierdo predeterminado */
+    list-style: none; /* Quita los números de lista */
+}
+
+.mundiales {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.mundiales h1 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* estilos para ambas lis*/
+.constructores {
+    padding: 0;
+}
+
+.constructores li {
+    margin-bottom: 10px;
+}
+
+/*Para la parte de grandes premios*/
+section.gp-disputados h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #d91e18;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para cada GP */
+section.gp-disputados .gp {
+    background-color: #fff;
+    margin: 10px 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section.gp-disputados .gp h2 {
+    font-size: 1.5rem;
+    color: #d91e18;
+    margin-bottom: 10px;
+}
+
+section.gp-disputados .gp p {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+/* Estilos para los textos destacados */
+section.gp-disputados .gp .fecha,
+section.gp-disputados .gp .ganador {
+    font-weight: bold;
+    color: #555;
+}
+
+.mundiales {
+    flex-direction: column;
+}
+/* Media queries para responsividad */
+@media (min-width: 500px) {
+    section.gp-disputados .gp {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    section.gp-disputados .gp h2 {
+        margin-right: 20px;
+        font-size: 1.75rem;
+    }    
+    
+    section.gp-disputados .gp p {
+        font-size: 1.1rem;
+        text-align: right;
+    }    
+    
+    section.gp-disputados .gp p.fecha,
+    section.gp-disputados .gp p.ganador {
+        text-align: left;
+    }    
+    
+}
+
+section.gp-disputados .gp p.fecha {
+    margin-bottom: 10px;
+    
+}
+
+
+
+
+/* Formularios */
+.container {
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    margin: 20px auto; 
+}
+
+.h2-form, p {
+    margin-bottom: 20px;
+    font-size: 1.5rem; 
+} 
+
+.login-container {
+    width: 100%; 
+    margin: 0 auto; 
+}
+
+.inciso-form {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.inciso-form, 
+.h2-form {
+    color: #FB000D;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Asegurar que el relleno no afecte el ancho total */
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%; /* Botón de ancho completo en dispositivos móviles */
+    font-size: 1rem; /* Tamaño de fuente adecuado para dispositivos móviles */
+}
+
+
+/* Media queries para pantallas más grandes */
+@media (min-width: 600px) {
+    .container {
+        width: 80%;
+        max-width: 600px; /* Limitar el ancho máximo en pantallas grandes */
+    }
+
+    .login-container {
+        width: 100%;
+    }
+
+    input, button {
+        width: 100%; /* Mantener el ancho completo en dispositivos grandes */
+    }
+
+    button {
+        width: auto; /* Ancho automático para que el botón se ajuste a su contenido */
+    }
+}
+
+
